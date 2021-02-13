@@ -1,0 +1,16 @@
+{
+  "name": "cake-store",
+  "version": "1.0.0",
+  "description": "graduation thesis",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start":"nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ngan and truc",
+  "license": "ISC"
+}
