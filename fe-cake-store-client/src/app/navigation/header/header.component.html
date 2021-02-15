@@ -1,0 +1,53 @@
+<header>
+    <div class="header-top">
+        <mat-toolbar>
+            <div class="container header-top-container">
+                <div fxHide.md
+                     fxHide.lg
+                     fxHide.xl>
+                    <button mat-icon-button
+                            (click)="onToggleSidenav()">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                </div>
+
+                <div fxFlex
+                     fxLayout
+                     fxLayoutAlign="center"><a routerLink="/">LOGO</a></div>
+
+                <div fxFlex
+                     fxLayout
+                     fxLayoutAlign="flex-end"
+                     fxHide.xs
+                     fxHide.sm
+                     class="header-top-quickSearch">
+                    <mat-form-field>
+                        <input matInput
+                               type='text'
+                               placeholder="Search"
+                               class="search-field">
+                        <button mat-button
+                                matSuffix
+                                mat-icon-button
+                                aria-label="Search">
+                            <mat-icon>search</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+                <div fxFlex
+                     fxLayout
+                     fxLayoutAlign="flex-end center"
+                     fxHide.xs
+                     fxHide.sm>
+                    <ul fxLayout
+                        fxLayoutGap="10px"
+                        class="header-top-menu">
+                        <li class="header-top-menu-item"><a>CONTACT US</a></li>
+                        <li class="header-top-menu-item"><a>DELIVERY SERVICE</a></li>
+                        <li class="header-top-menu-item"><a>TEL: 0208 7784705</a></li>
+                    </ul>
+                </div>
+            </div>
+        </mat-toolbar>
+    </div>
+</header>
