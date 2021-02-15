@@ -1,0 +1,43 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+.header-top-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  color: white;
+}
+
+mat-toolbar {
+  background-color: #a5d1d3;
+}
+
+.header-top-menu-item {
+  padding-right: 1.5rem;
+  font-size: 1rem;
+}
+
+.header-top-container {
+  align-items: center;
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header-top-quickSearch {
+  padding-right: 1.5rem;
+  position: relative;
+  color: white;
+}
+.search-field {
+  border-color: transparent;
+  color: #e75a7c;
+}

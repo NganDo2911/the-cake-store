@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/custom-theme.scss",
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fe-cake-store-client"
+    }
+  },
+  "defaultProject": "fe-cake-store-client",
+  "cli": {
+    "analytics": "c2fbed62-d133-4e81-9f73-bc8da9ad7826"
+  }
 }
