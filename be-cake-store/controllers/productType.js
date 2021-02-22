@@ -1,11 +1,15 @@
 const express = require('express');
-const router = express.Router();
+
 const ProductType = require('../models/productType');
+const Category = require('../models/category');
 
 exports.createProductType = async (req, res, next) => {
+	const category = await Category.findById(req.body.categoryId);
+
 	const productType = new ProductType({
 		name: req.body.name,
 		description: req.body.description,
+		categoryId: category._id,
 	});
 
 	const existedProductType = await ProductType.findOne({ name: req.body.name, status: true });
@@ -30,7 +34,7 @@ exports.getProductType = async (req, res, next) => {
 	if (productType) {
 		res.status(200).json(productType);
 	} else {
-		res.status(404).json({ message: 'Category not found' });
+		res.status(404).json({ message: 'Product Type not found' });
 	}
 };
 
