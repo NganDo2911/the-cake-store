@@ -7,10 +7,14 @@ const port = 3000;
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 
+const categoryRoutes = require('./routes/category-route');
+const productTypeRoutes = require('./routes/productType-route');
+const productRoutes = require('./routes/product-route');
+const reviewRoutes = require('./routes/review-route');
+const authRoutes = require('./routes/auth-route');
+const addressRoutes = require('./routes/address-route');
+const accountRoutes = require('./routes/account-route');
 dotenv.config();
-
-const categoryRoutes = require('./routes/category');
-const productTypeRoutes = require('./routes/productType');
 
 mongoose
 	.connect(process.env.MONGO_ATLAS, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -35,6 +39,10 @@ app.use((req, res, next) => {
 
 app.use('/api/category', categoryRoutes);
 app.use('/api/producttype', productTypeRoutes);
+app.use('/api/product', productRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/account', accountRoutes);
+app.use('/api/address', addressRoutes);
 
 app.listen(port, () => {
 	console.log(`REST API on http://localhost:${port}/api/`);
